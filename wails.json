@@ -14,7 +14,7 @@
   "frontend:dev:watcher": "npm run dev",
   "frontend:dev:serverUrl": "auto",
   "preBuildHooks": {
-    "windows/*": "cmd /S /C \"if exist ..\\windows\\icon.ico del /f /q ..\\windows\\icon.ico & if exist ..\\..\\SiloRedact-res.syso del /f /q ..\\..\\SiloRedact-res.syso\""
+    "windows/*": "cmd /S /C \"if exist build\\windows\\icon.ico del /f /q build\\windows\\icon.ico & if exist SiloRedact-res.syso del /f /q SiloRedact-res.syso\""
   },
   "author": {
     "name": "AlexanderMckain",
