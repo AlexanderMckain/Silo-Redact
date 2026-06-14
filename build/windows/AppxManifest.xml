@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+         xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+         xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+         IgnorableNamespaces="uap mp rescap">
+
+  <Identity Name="AlexanderMcKain.SiloRedact"
+            Publisher="CN=Alexander McKain"
+            Version="2.0.0.0"
+            ProcessorArchitecture="x64" />
+
+  <mp:PhoneIdentity PhoneProductId="00000000-0000-0000-0000-000000000000"
+                    PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+
+  <Properties>
+    <DisplayName>SiloRedact</DisplayName>
+    <PublisherDisplayName>Alexander McKain</PublisherDisplayName>
+    <Logo>build\windows\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.17763.0" MaxVersionTested="10.0.22621.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="en-us" />
+  </Resources>
+
+  <Applications>
+    <Application Id="SiloRedact"
+                 Executable="SiloRedact.exe"
+                 EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements DisplayName="SiloRedact"
+                          Description="SiloRedact"
+                          BackgroundColor="transparent"
+                          Square150x150Logo="build\windows\Square150x150Logo.png"
+                          Square44x44Logo="build\windows\Square44x44Logo.png">
+        <uap:DefaultTile ShortName="SiloRedact" />
+        <uap:SplashScreen Image="build\windows\SplashScreen.png" />
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust" />
+  </Capabilities>
+</Package>

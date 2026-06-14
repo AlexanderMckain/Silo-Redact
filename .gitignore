@@ -1,0 +1,53 @@
+# =============================================================================
+# SiloRedact DESKTOP APP — Wails + Go + Svelte (public repository)
+# =============================================================================
+
+# Go / Wails build outputs
+build/bin/
+build/windows/icon.ico
+*.syso
+*.exe
+*.exe.bak
+*.msix
+
+# Frontend
+node_modules/
+frontend/dist/
+frontend/package.json.md5
+
+# Environment / secrets (app needs none; block accidental commits)
+.env
+.env.*
+!.env.example
+
+# Signing / keys
+*.pfx
+*.p12
+*.pem
+*.key
+*.cer
+
+# Local user settings (runtime, not source)
+settings.json
+
+# Logs & temp
+*.log
+*.tmp
+*.swp
+*~
+
+# Test / coverage
+coverage/
+*.out
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.suo
+*.user
+
+# Local machine data
+*.dat

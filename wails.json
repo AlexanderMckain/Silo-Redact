@@ -1,0 +1,23 @@
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "SiloRedact",
+  "outputfilename": "SiloRedact",
+  "info": {
+    "companyName": "Alexander McKain",
+    "productName": "SiloRedact",
+    "productVersion": "2.0.0",
+    "copyright": "Copyright © 2026 Alexander McKain",
+    "comments": "https://siloredact.com"
+  },
+  "frontend:install": "npm install",
+  "frontend:build": "npm run build",
+  "frontend:dev:watcher": "npm run dev",
+  "frontend:dev:serverUrl": "auto",
+  "preBuildHooks": {
+    "windows/*": "cmd /S /C \"if exist ..\\windows\\icon.ico del /f /q ..\\windows\\icon.ico & if exist ..\\..\\SiloRedact-res.syso del /f /q ..\\..\\SiloRedact-res.syso\""
+  },
+  "author": {
+    "name": "AlexanderMckain",
+    "email": "support@siloredact.com"
+  }
+}
